@@ -1,0 +1,37 @@
+name: comsm0018
+channels:
+- pytorch
+- conda-forge
+- defaults
+dependencies:
+- h5py=2.9.0
+- imageio=2.5.0
+- imagesize=1.1.0
+- ipykernel=5.1.0
+- ipython=7.4.0
+- ipython_genutils
+- ipywidgets=7.4.2
+- isort=4.3.16
+- jupyter=1.0.0
+- jupyter_client=5.2.4
+- jupyter_console=6.0.0
+- jupyterlab=0.35.4
+- jupyterlab_server=0.2.0
+- nbconvert=5.4.1
+- nbformat=4.4.0
+- notebook=5.7.8
+- numpy=1.16.2
+- pandas=0.24.2
+- pillow=5.4.1
+- pip=19.0.3
+- python=3.7.3
+- pytorch=1.1.0
+- scikit-image=0.14.2
+- scikit-learn=0.20.3
+- scipy=1.2.1
+- seaborn=0.9.0
+- setuptools=40.8.0
+- tensorboard=1.14.0
+- tensorflow=1.14.0
+- torchvision=0.3.0
+- tqdm=4.31.1

@@ -1,0 +1,15 @@
+digraph {
+    node [shape=circle]
+    y_op [label="+"]
+    z_op [label="*"]
+    const_3 [label="3"]
+    const_2 [label="2"]
+    x [label="x"]
+    output [label="z"]
+
+    x -> y_op
+    const_2 -> y_op;
+    y_op -> z_op [label="y"];
+    const_3 -> z_op;
+    z_op -> output [label="z"];
+}
