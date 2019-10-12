@@ -9,6 +9,7 @@ Labsheets for the Applied Deep Learning course.
 |-------------------------------------------------------|----------------------------------------------------------------------------------------------------------------|
 | [0](lab-0-python-intro/0-contents.ipynb)              | [Introduction to Python and the scientific Python ecosystem](lab-0-python-intro/0-contents.ipynb)              |
 | [1](lab-1-dnns/lab-1-dnns.ipynb)                      | [Your First Fully Connected Network](lab-1-dnns/lab-1-dnns.ipynb)                                           |
+| [2](lab-2-cnns/lab-2-cnns.ipynb)                      | [BC4 and Your First CNN](lab-2-cnns/lab-2-cnns.ipynb) | 
 
 If you have trouble viewing the labsheets on github, you can try using the
 [NBViewer](https://nbviewer.jupyter.org/github/COMSM0018-Applied-Deep-Learning/labsheets/tree/master/) service provided by ipython.org.
