@@ -3,6 +3,7 @@
 #SBATCH --job-name=lab1
 #SBATCH --partition=teach_gpu
 #SBATCH --nodes=1
+#SBATCH --account=coms030144
 #SBATCH -o ./log_%j.out # STDOUT out
 #SBATCH -e ./log_%j.err # STDERR out
 #SBATCH --gres=gpu:1
