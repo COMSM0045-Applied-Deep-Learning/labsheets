@@ -3,6 +3,7 @@ from __future__ import annotations
 import time
 from multiprocessing import cpu_count
 from typing import Union, NamedTuple
+import sys
 
 import torch
 import torch.backends.cudnn
@@ -129,6 +130,33 @@ def main(args):
 
     summary_writer.close()
 
+class Attention(nn.Module):
+    def __init__(self, dim=192, num_heads=1):
+        super().__init__()
+        self.num_heads = num_heads
+        self.head_dim = dim // num_heads
+        self.scale = self.head_dim ** -0.5
+
+        self.qkv = nn.Linear(dim, dim * 3, bias=False)
+
+        self.proj = nn.Linear(dim, dim)
+
+    def forward(self, x):
+        B, S, D = x.shape
+
+        qkv = self.qkv(x).reshape(B, S, 3, self.num_heads, self.head_dim).permute(2, 0, 3, 1, 4)
+        q, k, v = qkv[0], qkv[1], qkv[2]
+
+        #TASK 12.1 Multiply by scale
+
+        #TASK 12.2 Multiply queries by keys (transposed)
+
+        #TASK 12.3 Apply softmax
+
+        #TASK 12.4 Multiply the attention and values, then concatenate across heads
+
+        x = self.proj(x)
+        return x
 
 class CIFAR_Transformer(nn.Module):
     def __init__(self, height: int, width: int, channels: int, patch_size: tuple[int, int], class_count: int, n_heads: int=1):
