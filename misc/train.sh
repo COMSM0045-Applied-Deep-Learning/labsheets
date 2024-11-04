@@ -8,8 +8,9 @@
 #SBATCH --gres=gpu:1
 #SBATCH --time=0:10:00
 #SBATCH --mem=2GB
+#SBATCH --account=COMS033444
 
-module load languages/anaconda3/2021-3.8.8-cuda-11.1-pytorch
+module load languages/python/tensorflow-2.16.1
 echo "Start"
 python train_mnist.py
 echo "Done"
