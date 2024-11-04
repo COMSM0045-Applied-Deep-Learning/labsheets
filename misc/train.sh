@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #SBATCH --job-name=lab1
-#SBATCH --partition=teach_gpu
+#SBATCH --partition=gpu
 #SBATCH --nodes=1
 #SBATCH -o ./log_%j.out # STDOUT out
 #SBATCH -e ./log_%j.err # STDERR out
