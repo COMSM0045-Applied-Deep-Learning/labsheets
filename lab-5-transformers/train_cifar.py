@@ -109,7 +109,7 @@ def main(args):
 
     criterion = nn.CrossEntropyLoss()
 
-    optimizer = optim.SGD(model.parameters(), lr=0.05)
+    optimizer = None
 
     log_dir = get_summary_writer_log_dir(args)
     print(f"Writing logs to {log_dir}")
@@ -169,8 +169,8 @@ class CIFAR_Transformer(nn.Module):
 
 
     def forward(self, images: torch.Tensor) -> torch.Tensor:
-        x = nn.Identity(images)
         #TASKS 1, 2, 3.2, 7, 8, 9.2, 10, 11.2
+        x = images # Update this with forward pass
         return x
 
 
